@@ -1,12 +1,12 @@
 [programs.localnet]
-phhdao = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+phhdao = "74UV6yKRkHzzkATgrGzPTUhhML6u48ST1BHxjUiScg52"
 
 [registry]
 url = "https://anchor.projectserum.com"
 
 [provider]
-cluster = "devnet"
+cluster = "localnet"
 wallet = "/Users/nagy/Desktop/HackerHouse/decidooor/secret/phhdao.json"
 
 [scripts]
-test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.tsx"
