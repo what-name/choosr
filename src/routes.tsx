@@ -56,5 +56,3 @@ export function Routes() {
     </HashRouter>
   );
 }
-
-//comment
