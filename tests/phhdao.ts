@@ -22,16 +22,16 @@ describe('phhdao', () => {
     } as any)
   });
 
-  it('Gov token Mint', async () => {
-    await program.rpc.handleDeposit(amount, {
-      accounts: {
-        owner: ownerAccount.publicKey,
-        treasuryAccount: "ANPzsMRRUsAhCjgG7VQxAC1hYFJChofQ239H33J12Gnj",
-        systemProgram: anchor.web3.SystemProgram.programId,
-      },
-      signers: [ownerAccount],
-    } as any)
-  });
+  // it('Gov token Mint', async () => {
+  //   await program.rpc.handleDeposit(amount, {
+  //     accounts: {
+  //       owner: ownerAccount.publicKey,
+  //       treasuryAccount: "ANPzsMRRUsAhCjgG7VQxAC1hYFJChofQ239H33J12Gnj",
+  //       systemProgram: anchor.web3.SystemProgram.programId,
+  //     },
+  //     signers: [ownerAccount],
+  //   } as any)
+  // });
 });
 
 

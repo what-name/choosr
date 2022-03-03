@@ -5,7 +5,7 @@ use anchor_lang::prelude::*;
 // use solana_sdk::account_info::IntoAccountInfo;
 use anchor_spl::token::{self, Token, TokenAccount, Mint, Transfer, MintTo};
 use anchor_lang::solana_program::{program::invoke, system_instruction};
-use anchor_lang::{ToAccountInfo, Id};
+// use anchor_lang::{ToAccountInfo, Id};
 use std::str::FromStr;
 
 declare_id!("74UV6yKRkHzzkATgrGzPTUhhML6u48ST1BHxjUiScg52");
@@ -52,9 +52,9 @@ pub struct HandleDeposit<'info> {
     #[account(mut, address = Pubkey::from_str(TREASURY_ACCOUNT).unwrap())]
     pub treasury_account: AccountInfo<'info>,
     pub system_program: Program<'info, System>,
-    pub spl_program: Program<'info, Token>,
-    pub mint: Account<'info, Mint>,
-    pub user_token_acc: Account<'info, TokenAccount>,
+    // pub spl_program: Program<'info, Token>,
+    // pub mint: Account<'info, Mint>,
+    // pub user_token_acc: Account<'info, TokenAccount>,
 }
 
 impl<'info> HandleDeposit<'info> {
