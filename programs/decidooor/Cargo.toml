@@ -18,3 +18,4 @@ default = []
 [dependencies]
 anchor-lang = "0.20.1"
 anchor-spl = "0.20.1"
+solana-sdk = "1.10.0"
