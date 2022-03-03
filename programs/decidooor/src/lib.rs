@@ -11,7 +11,7 @@ use std::str::FromStr;
 declare_id!("74UV6yKRkHzzkATgrGzPTUhhML6u48ST1BHxjUiScg52");
 
 pub const TREASURY_ACCOUNT: &str = "ANPzsMRRUsAhCjgG7VQxAC1hYFJChofQ239H33J12Gnj";
-pub const GOV_TOKEN: &str = "PHHi5AsrPgWs32VtiB4PMGiudaFzjGC8Una5BEzvwLZ";
+pub const GOV_TOKEN: &str = "PHHJQry4FhrtTJMscDYo8S26ksmi7GwW8TmcKJkppcp";
 pub const PROGRAM_ID: &str = "74UV6yKRkHzzkATgrGzPTUhhML6u48ST1BHxjUiScg52";
 
 // let treasury_pubkey = "3t9wRrwK99uEKzexCHdzxCumUKjG7bMxngQqFESMTJwx";
@@ -24,17 +24,17 @@ pub mod phhdao {
         msg!("Transfer deposit to treasury");
         ctx.accounts.transfer_deposit(amount)?;
         
-        msg!("Mint governance token to user");
-        let cpi_accounts = token::MintTo {
-            mint: ctx.accounts.mint.to_account_info(),
-            to: ctx.accounts.owner.to_account_info(),
-            authority: ToAccountInfo::to_account_info(&id()),
-        };
+        // msg!("Mint governance token to user");
+        // let cpi_accounts = token::MintTo {
+        //     mint: ctx.accounts.mint.to_account_info(),
+        //     to: ctx.accounts.owner.to_account_info(),
+        //     authority: ToAccountInfo::to_account_info(&id()),
+        // };
     
-        let cpi_program = ctx.accounts.spl_program.to_account_info();
-        let cpi_mint_tx = CpiContext::new(cpi_program, cpi_accounts);
+        // let cpi_program = ctx.accounts.spl_program.to_account_info();
+        // let cpi_mint_tx = CpiContext::new(cpi_program, cpi_accounts);
         
-        token::mint_to(cpi_mint_tx, 1)?;
+        // token::mint_to(cpi_mint_tx, 1)?;
 
         Ok(())
     }

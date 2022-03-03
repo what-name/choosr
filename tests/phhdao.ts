@@ -14,7 +14,7 @@ describe('phhdao', () => {
 
     await program.rpc.handleDeposit(amount, {
       accounts: {
-        owner: ownerAccount.publicKey,
+        owner: ownerAccount.publicKey, //wallet.publicKey
         treasuryAccount: "ANPzsMRRUsAhCjgG7VQxAC1hYFJChofQ239H33J12Gnj",
         systemProgram: anchor.web3.SystemProgram.programId,
       },
@@ -33,3 +33,12 @@ describe('phhdao', () => {
     } as any)
   });
 });
+
+
+/*
+- Get clone scaffold from soldev app
+- anchor web3js to be used
+- use anchor exported types maybe instead of IDL
+- see solana twitter dapp from scratch section 8 for connecting to wallet and submitting transaction
+- use solana wallet adapter react
+*/
