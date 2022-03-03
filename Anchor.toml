@@ -5,8 +5,8 @@ phhdao = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
 url = "https://anchor.projectserum.com"
 
 [provider]
-cluster = "devnet"
-wallet = "/Users/nagy/Desktop/HackerHouse/phhdao.json"
+cluster = "localnet"
+wallet = "/Users/nagy/Desktop/HackerHouse/decidooor/secret/phhdao.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
