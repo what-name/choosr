@@ -11,3 +11,5 @@ spl-token create-token \
     --decimals 0 \
     PHHi5AsrPgWs32VtiB4PMGiudaFzjGC8Una5BEzvwLZ.json
 ```
+
+FUCK
